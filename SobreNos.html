@@ -1,0 +1,46 @@
+<html lang="pt">
+    <head>
+        <link rel="stylesheet" href="CSS/InfoPage.css">
+    </head>
+
+    <body>
+        <button id="backBtn" class="back-button">← Voltar</button>
+        
+        <div class="container">
+            <h1>Sobre Nós</h1>
+            
+            <div class="info-section">
+                <p>
+                    Somos um grupo de estudantes universitários encarregados de criar um projeto educativo e interativo sobre o lobo ibérico. O nosso objetivo é sensibilizar as pessoas para a importância da conservação desta espécie e promover o conhecimento sobre a sua biologia, comportamento e habitat.
+                </p>
+            </div>
+
+            <div class="gallery-section">
+                <h2>A Equipa</h2>
+                <div class="image-gallery">
+                    <!-- Images can be added here -->
+                    <div class="gallery-item">
+                        <img src="Imagens/Luis.png" alt="Luis" class="gallery-img" >
+                        <p class="gallery-caption">Luís Neves</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Imagens/JN.png" alt="Joao" class="gallery-img">
+                        <p class="gallery-caption">João Baltazar</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Imagens/Angelo.png" alt="Angelo" class="gallery-img">
+                        <p class="gallery-caption">Ângelo Botelho</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal/Lightbox -->
+        <div id="imageModal" class="image-modal">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Expanded Image" class="modal-image">
+        </div>
+
+        <script src="JS/SobreNos.js"></script>
+    </body>
+</HTML>

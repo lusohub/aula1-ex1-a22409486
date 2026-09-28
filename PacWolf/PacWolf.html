@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PacWolf - Edição Floresta</title>
+        <link rel="stylesheet" href="PacWolf.css">
+    </head>
+    <body>
+        <button id="backBtn" class="back-button">← Voltar</button>
+
+        <div class="game-wrapper">
+            <h1>🐺 PacWolf: Fuga dos Caçadores 🏹</h1>
+            
+            <div class="score-board">
+                <div>Pontuação: <span id="score">0</span></div>
+                <div>Vidas: <span id="lives">🐺 🐺 🐺</span></div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="gameCanvas" width="560" height="440"></canvas>
+            </div>
+
+            <div class="instructions">
+                <p>Usa as <strong>setas do teclado</strong> para guiar o lobo pela floresta. Come a comida e foge dos caçadores humanos!</p>
+            </div>
+        </div>
+
+        <script src="PacWolf.js"></script>
+        <script>
+            document.getElementById('backBtn').addEventListener('click', () => {
+                window.location.href = '../Jogos.html'; // Volta para a tua página principal
+            });
+        </script>
+    </body>
+</html>

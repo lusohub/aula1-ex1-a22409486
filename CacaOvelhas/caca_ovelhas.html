@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Caça à Ovelha</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css_caca_ovelhas.css">
+</head>
+<body>
+  <button id="backBtn" class="back-button">← Voltar</button>
+
+  <div id="menu" class="menu-container">
+      <div class="menu-header">
+        <h1 class="game-title"><span class="emoji-wolf">🐺</span> Caça à Ovelha <span class="emoji-sheep">🐑</span></h1>
+        <p class="game-subtitle">Um jogo de estratégia e puzzle com grafos</p>
+      </div>
+      
+      <div id="menuCard" class="menu-card">
+        <button id="startBtn" class="difficulty-btn medium" onclick="start()">🚀 COMEÇAR</button>
+        <p id="record" class="record-text">🏅 Melhor Nível: 0</p>
+      </div>
+
+      <div class="ranking-container">
+        <h2 class="ranking-title">🏆 TOP 5 JOGADORES</h2>
+        <table id="rankingTable" class="rankingTable"></table>
+      </div>
+  </div>
+
+  <div id="hud" class="hud-bar" style="display:none">
+      <div id="infoLeft" class="hud-info-left">
+        <span class="hud-label">📊 Nível:</span> <span id="levelDisplay" class="hud-value">1</span>
+        <span class="hud-label">🚶 Movimentos:</span> <span id="movesDisplay" class="hud-value">0</span>
+      </div>
+      <div id="infoRight" class="hud-buttons">
+        <button id="newMapBtn" class="hud-btn" title="Novo mapa no mesmo nível">🔄 Mapa</button>
+        <button id="resetBtn" class="hud-btn" title="Recomeça o nível">⟲ Reset</button>
+        <button id="nextLevelBtn" class="hud-btn primary" disabled title="Próximo nível">➤ Nível+</button>
+        <button id="resetRecordsBtn" class="hud-btn danger" title="Apaga recordes">🗑️ Limpar</button>
+      </div>
+    </div>
+
+  <div id="jogoArea" style="display:none" class="game-container">
+      <div id="board-wrapper">
+        <svg id="edges" aria-hidden="true"></svg>
+        <div id="nodes" role="grid" aria-label="Tabuleiro de jogo com nós clicáveis"></div>
+
+        <img id="wolf" class="piece" src="" alt="Lobo">
+        <img id="sheep" class="piece" src="" alt="Ovelha">
+        <img id="cabbage" class="piece" src="" alt="Repolho">
+      </div>
+
+      <div class="status-area">
+        <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true">🎮 Clique num nó ligado para mover o lobo.</div>
+      </div>
+  </div>
+
+  <div id="gameOver" style="display:none">
+      <div class="game-over-content">
+        <h1 id="gameOverTitle">🎉 VITÓRIA! 🎉</h1>
+        <h2 id="finalScore" class="final-score-text"></h2>
+
+        <div class="ranking-container">
+          <h2>🏆 TOP 5 JOGADORES</h2>
+          <table id="rankingTableGameOver" class="rankingTable"></table>
+        </div>
+
+        <button onclick="restartGame()" class="restart-btn">🔄 VOLTAR</button>
+      </div>
+  </div>
+
+  <script src="js_caca_ovelhas.js" defer></script>
+  
+</body>
+</html>

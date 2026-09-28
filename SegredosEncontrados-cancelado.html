@@ -1,0 +1,46 @@
+<html lang="pt">
+    <head>
+        <link rel="stylesheet" href="CSS/InfoPage.css">
+    </head>
+
+    <body>
+        <button id="backBtn" class="back-button">← Voltar</button>
+        
+        <div class="container">
+            <h1>Segredos Encontrados</h1>
+            
+            <div class="info-section">
+                <p>
+                    Neste site dedicado ao lobo ibérico, existem segredos escondidos que os visitantes podem descobrir. <br> 
+                    Abaixo estão os três segredos que os utilizadores podem encontrar, são revelados quando forem encotrados:
+                </p>
+            </div>
+
+            <div class="gallery-section">
+                <h2>Galeria de Imagens</h2>
+                <div class="image-gallery">
+                    <div class="gallery-item-locked" id="segredo-1">
+                        <div class="secret-placeholder">🔒 Segredo Bloqueado</div>
+                        <img src="Imagens/LoboIberico4.png" class="gallery-img" >
+                    </div>
+                    <div class="gallery-item-locked" id="segredo-2">
+                        <div class="secret-placeholder">🔒 Segredo Bloqueado</div>
+                        <img src="Imagens/LoboIberico5.png" class="gallery-img">
+                    </div>
+                    <div class="gallery-item-locked" id="segredo-3">
+                        <div class="secret-placeholder">🔒 Segredo Bloqueado</div> 
+                        <img src="Imagens/LoboIberico7.png" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal/Lightbox -->
+        <div id="imageModal" class="image-modal">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Expanded Image" class="modal-image">
+        </div>
+
+        <script src="JS/segredos.js"></script>
+    </body>
+</HTML>

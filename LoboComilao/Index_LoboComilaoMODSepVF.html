@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobo Comilão</title>
+
+    <link rel="stylesheet" href="Style_LoboComilao.css">
+</head>
+
+<body>
+
+<div id="menu">
+    <h1>
+        <img src="Imagens_LoboComilão/lobito.png"
+             style="width:1.5em; vertical-align:middle;"
+             onerror="this.style.display='none'">
+        Lobo Comilão
+    </h1>
+
+    <div id="menuCard">
+        <button class="backBtn" onclick="goBackToGames()">⬅ Voltar ao Menu de Jogos</button>
+
+        <br><br>
+
+        <h2>Escolha a Dificuldade!</h2>
+        <button class="easy" onclick="start('easy')">Fácil</button>
+        <button class="medium" onclick="start('medium')">Médio</button>
+        <button class="hard" onclick="start('hard')">Difícil</button>
+
+        <p id="record"></p>
+    </div>
+
+    <div id="instructions">
+    <h3>📖 Como Jogar</h3>
+
+    <p>
+        Move o lobo utilizando:
+        <br>
+        ⌨️ Teclas A / D ou ← →
+        <br>
+        🖱️ Movimento do rato
+    </p>
+
+    <h3>🍖 Pontuação</h3>
+
+    <ul>
+        <li> <img src="Imagens_LoboComilão/Bife_Carne.png" width="24">
+            Bife = +1 ponto
+        </li>
+        <li> <img src="Imagens_LoboComilão/Coxa_Frango.png" width="24">
+            Coxa de Frango = +2 pontos
+        </li>
+        <li> <img src="Imagens_LoboComilão/Peça_Carne.png" width="24">
+            Peça de Carne = +5 pontos
+        </li>
+    </ul>
+
+    <h3>❤️ Itens Especiais</h3>
+
+    <ul>
+        <li>
+            <img src="Imagens_LoboComilão/Golden_Heart.png" width="24">
+            Coração Dourado = +1 Vida</li>
+    </ul>
+
+    <h3>☠️ Itens Perigosos</h3>
+
+    <ul>
+        <li> <img src="Imagens_LoboComilão/Cookie.png" width="24">
+            Cookie = -1 Vida</li>
+        <li> <img src="Imagens_LoboComilão/Choco.png" width="24">
+            Chocolate = -2 Vidas</li>
+    </ul>
+
+    <p>
+        🔥 Combos aumentam os pontos:
+        <br>
+        x5 = Dobro
+        <br>
+        x10 = Triplo
+        <br>
+        x20 = Quadruplo
+    </p>
+</div>
+
+    <br>
+
+    <div class="ranking-container">
+        <h2>🏆 RANKING TOP 5</h2>
+        <table id="rankingTable" class="rankingTable"></table>
+    </div>
+</div>
+
+<div id="hud">
+    <div id="score">
+        <img src="Imagens_LoboComilão/Peça_Carne.png"
+             style="width:1em; vertical-align:middle;"
+             onerror="this.style.display='none'">
+
+        <span id="scoreValue">0</span>
+    </div>
+
+    <div id="livesContainer"></div>
+</div>
+
+<div id="jogoArea">
+    <div id="lobo">
+        <img src="Imagens_LoboComilão/Lobito.png" alt="Lobo">
+    </div>
+</div>
+
+<div id="gameOver">
+    <h1>GAME OVER</h1>
+
+    <h2 id="finalScore"></h2>
+
+    <div class="ranking-container">
+        <h2>🏆 RANKING TOP 5</h2>
+        <table id="rankingTableGameOver" class="rankingTable"></table>
+    </div>
+
+    <br>
+
+    <button onclick="restartGame()">
+        VOLTAR
+    </button>
+</div>
+
+<script src="Script_LoboComilao.js"></script>
+
+</body>
+</html>

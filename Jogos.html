@@ -1,0 +1,55 @@
+<html lang="pt">
+    <head>
+        <link rel="stylesheet" href="CSS/Jogos.css">
+    </head>
+
+    <body>
+        <img id="background" src="Imagens/fundoJogos.png" alt="Background Image">
+        <button id="backBtn" class="back-button">← Voltar</button>
+        
+        <div class="container">
+            <h1>🐺 Jogos Temáticos e Quiz 🎮</h1>
+
+            <div class="game-section">
+                <div class="game-selection">
+                    <!-- Images can be added here -->
+                    <div class="game-container">
+                        <a href="PacWolf/PacWolf.html" class="link">
+                            <video class="game-video" src="Videos/PacWolf.mp4" muted loop playsinline></video>
+                            <img class="game-image" src="Imagens/PacWolf.png" alt="PacMan Wolf Edition">
+                            <div class="game-title">PacWolf</div>
+                        </a>
+                    </div>
+
+                    <div class="game-container">
+                        <a href="LoboComilao/Index_LoboComilaoMODSepVF.html" class="link">
+                            <video class="game-video" src="Videos/LoboComilao.mp4" muted loop playsinline></video>
+                            <img class="game-image" src="Imagens/LoboComilao.png" alt="Feed the Wolf Game">
+                            <div class="game-title">Lobo Comilão</div>
+                        </a>
+                    </div>
+
+                    <div class="game-container">
+                        <a href="CacaOvelhas/caca_ovelhas.html" class="link">
+                            <video class="game-video" src="Videos/CacaOvelhas.mp4" muted loop playsinline></video>
+                            <img class="game-image" src="Imagens/CacaOvelhas.png" alt="Hunt the Sheep Game">
+                            <div class="game-title">Caça à Ovelha</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-section">
+                <h2>Quiz Interativo</h2>
+                <button id="startQuizBtn" class="quiz-button">Iniciar Quiz</button>
+            </div>
+        </div>
+
+        <!-- Image Modal/Lightbox -->
+        <div id="imageModal" class="image-modal">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Expanded Image" class="modal-image">
+        </div>
+
+        <script src="JS/Jogos.js"></script>
+    </body>
+</HTML>

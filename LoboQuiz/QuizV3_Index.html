@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Lobo-Ibérico</title>
+    <link rel="stylesheet" href="QuizV3_Estilos.css">
+</head>
+<body>
+
+<div id="startScreen" class="screen active">
+    <button class="backBtn" onclick="goBackToGames()">⬅ Voltar ao Menu de Jogos</button>
+
+    <h1>🐺 Quiz do Lobo-Ibérico</h1>
+
+    <div class="instructions">
+        <h3>📋 Como Jogar:</h3>
+        <ul>
+            <li>Responde a <strong>20 perguntas</strong> sobre o lobo-ibérico.</li>
+            <li>Tens <strong>15 segundos</strong> para responder a cada pergunta.</li>
+            <li><strong>🔥 Sistema de Streak:</strong> Acertar perguntas seguidas dá bónus de pontos adicionais!</li>
+            <li>A tua pontuação final será usada para emitir o teu certificado. Boa sorte!</li>
+        </ul>
+    </div>
+
+    <button onclick="startGame()">Começar Quiz</button>
+
+    <div id="bestScore"></div>
+</div>
+
+<div id="quizScreen" class="screen">
+
+    <div class="top">
+        <div>Pontos: <span id="score">0</span></div>
+        <div>🔥 Streak: <span id="streak">0</span></div>
+        <div>⏱ <span id="time">15</span></div>
+    </div>
+
+    <div id="progressText"></div>
+
+    <div id="question">Pergunta</div>
+
+    <div class="answers">
+        <button class="ans a"></button>
+        <button class="ans b"></button>
+        <button class="ans c"></button>
+        <button class="ans d"></button>
+    </div>
+
+    <div class="bar">
+        <div id="progress"></div>
+    </div>
+
+</div>
+
+<div id="endScreen" class="screen">
+    <h1>Resultado Final</h1>
+
+    <div id="finalStats"></div>
+    <div id="rank"></div>
+
+    <div class="end-actions">
+        <button onclick="location.reload()">Jogar novamente</button>
+    </div>
+</div>
+
+<audio id="okSound" src="Audio_Quiz/Resposta_Certa_SE.mp3" preload="auto"></audio>
+<audio id="wrongSound" src="Audio_Quiz/Errado_SE.mp3" preload="auto"></audio>
+<audio id="tickSound" src="Audio_Quiz/Tick_SE.mp3" preload="auto"></audio>
+
+<script src="QuizV3_Script.js"></script>
+
+</body>
+</html>

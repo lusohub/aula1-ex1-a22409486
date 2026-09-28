@@ -1,0 +1,141 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4b4b4b 0%, #b6b6b6 100%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Back button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateX(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main container */
+.container {
+    position: relative;
+    top: 50px;
+    max-width: 1000px;
+    margin: 30px auto 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #424242;
+    padding-bottom: 15px;
+}
+
+/* Activities Section Grid Layout */
+.game-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Game Card Container */
+.game-container {
+    position: relative;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.game-container:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Make both elements fill the card entirely */
+.game-image, .game-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio without stretching */
+}
+
+/* Video sits above image but stays invisible until playing */
+.game-video {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+/* Class added by JavaScript when video successfully plays */
+.game-video.is-playing {
+    opacity: 1;
+}
+
+/* Text overlay styling */
+.game-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px 10px 10px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    z-index: 3; /* Keeps title visible over the video */
+    box-sizing: border-box;
+}
+
+.quiz-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.quiz-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background: #424242;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
