@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto Lobo - Página Inicial</title>
+
+        <script src="JS/login.js" defer></script>
+        <script src="JS/Certificado.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+        <script src="JS/slideshow.js" defer></script>
+        <script src="JS/segredo_howl.js" defer></script>
+        
+        <link rel="stylesheet" href="CSS/Index.css">
+    </head>
+
+    <body>
+        <img id="Bay" src="Imagens/Bay.png" alt="Lobo Iberico">
+        <img id="logoIpluso" src="Imagens/iplusoLogo.png" alt="Logo IPLUSO">
+        
+        <button id="prevBtn" class="slide-button prev-button">&#10094;</button>
+        <button id="nextBtn" class="slide-button next-button">&#10095;</button>
+
+        <div id="slideShowContainer" class="slideshow-container">
+            <img id="slideShow" src="" alt="Slide Show">
+            <div id="slideIndicators" class="slide-indicators"></div>
+        </div>
+        <div class="container">
+            <div class="form-wrapper">
+                <h2 class="login-label">Login</h2>
+                <form id="loginForm">
+                    <input type="text" name="Username" maxlength="40" placeholder="Nome">
+                    <button type="submit" class="login-btn">Entrar</button>
+                </form>
+            </div>
+        
+            <ul>
+                <li><a href="SobreOLobo.html" class="link">Sobre o Lobo</a></li>
+                <li><a href="Jogos.html" class="link">Jogos e Quiz</a></li>
+                <li><a href="SobreNos.html" class="link">Sobre Nós</a></li>
+                <li><a href="SobreProfs.html" class="link">Para os Professores</a></li>
+                <li><button id="Certificado"  onclick="emitirCertificado()" disabled title="Certificado disponível após completar todos os jogos e o quiz">Gerar Certificado</button></li>
+            </ul>
+        </div>
+
+        <button id="secretButton" class="secret-btn" title="???"></button>
+        <audio id="secretSound" src="Audio/howl.mp3"></audio>
+    </body>
+</html>
